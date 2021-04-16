@@ -23,9 +23,7 @@ On this website I worked with: <br>
 ## 📌 POSSIBLE UPGRADES
 I'm uploading this project on github because I think this is something I can work on to improve and practice my habilities so, possibly in my free times I'll be doing some updates on this website and on this case, since this project didn't have an original objective besides testing my habilities, I will bring a new idea for it. Probably will use one of the pages to rebuild this website.
 
----
-
-## 💁‍♀️ Author
+## 💁‍♀️ AUTHOR
 <table>
   <tr>
     <td align="center">
