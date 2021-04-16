@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css\edit.css">
+
+<title>Projeto Final - PicGame</title>
+	
+<script>
+var nome;
+
+function myFunction(){
+
+nome = prompt("Digite seu nome:");
+
+if (nome == null || nome == "" || !isNaN(nome))
+  {
+	alert("O campo de utilizador está vazio ou é um número! Preencha-o corretamente por favor.");
+	myFunction();
+  }
+  else{
+	alert("Beleza, nome introduzido :D");
+  }
+}
+
+function valida(){
+	var cont=0;
+	
+	filme1 = document.getElementById("resposta1").value;
+	filme2 = document.getElementById("resposta2").value;
+	filme3 = document.getElementById("resposta3").value;
+	filme4 = document.getElementById("resposta4").value;
+	filme5 = document.getElementById("resposta5").value;
+	
+	if(filme1=="" || filme2=="" || filme3=="" || filme4=="" || filme5==""){
+		alert("Não digitaste nenhum nome, por favor preencha novamente.");
+	}
+	else{
+		if(filme1=="avatar"){
+			cont=cont+5;
+		}
+	
+		if(filme2=="deadpool"){
+			cont=cont+5;
+		}
+	
+		if(filme3=="star wars"){
+			cont=cont+5;
+		}
+	
+		if(filme4=="homem aranha"){
+			cont=cont+5;
+		}
+	
+		if(filme5=="x men"){
+			cont=cont+5;
+		}
+		
+		alert("Parabéns, " + nome + " você acertou " + cont + " de 25 pontos!");
+	}
+}
+</script>	
+</head>
+
+<body onload="myFunction()">
+<center>
+<div class="header">
+	<h2> PICGAME - ADIVINHE O FILME </h2>
+</div>
+
+<div>
+<nav class="">
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Inscrição</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li class="active"><a href="picgame.html">PicGame</a></li>
+	  <li><a href="calculadora.html">Calculadora</a></li>
+    </ul>
+</nav>
+</div>
+<div class="row">
+</div>
+<div class = "direita">
+</div><br>
+
+	<p>Bem vindo ao nosso jogo de Adivinhe o Filme! Para jogar basta colocar os nomes dos filmes nas caixinhas e 
+	clicar no botão para ver os seus pontos! Muito fácil não? Bora lá tentar!</p>
+	
+	<form name="form1" onsubmit="valida()">
+	<fieldset><br>
+	<img src="imgs\img1.jpg" width="550" height="420"><br>
+	Introduza o nome do filme:
+	<input type="text" name="filme1" id="resposta1" size=30><br><br>
+	
+	<img src="imgs\img2.jpg" width="550" height="420"><br>
+	Introduza o nome do filme:
+	<input type="text" name="filme2" id="resposta2" size=30><br><br>
+	
+	<img src="imgs\img3.jpg" width="550" height="420"><br>
+	Introduza o nome do filme:
+	<input type="text" name="filme3" id="resposta3" size=30><br><br>
+	
+	<img src="imgs\img4.jpg" width="550" height="420"><br>
+	Introduza o nome do filme:
+	<input type="text" name="filme4" id="resposta4" size=30><br><br>
+	
+	<img src="imgs\img5.jpg" width="550" height="420"><br>
+	Introduza o nome do filme:
+	<input type="text" name="filme5" id="resposta5" size=30><br>
+	
+	<input type="submit" value="Clique aqui para ver o resultado!">
+	</fieldset><br>
+	</form><br>
+	
+<div class = "rodape">
+<h6>PROJETO FINAL - LARA Nº17 11º14<h6>
+</div>
+
+	
+</body>
+
+</html>

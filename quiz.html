@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css\edit.css">
+
+<title>Projeto Final - Quiz</title>
+	
+<script>
+var nome;
+
+function myFunction(){
+
+nome = prompt("Digite seu nome:");
+
+if (nome == null || nome == "" || !isNaN(nome))
+  {
+	alert("O campo de utilizador está vazio ou é um número! Preencha-o corretamente por favor.");
+	myFunction();
+  }
+  else{
+	alert("Beleza, nome introduzido :D");
+  }
+}
+
+function valida(){
+	var cont=0;
+	
+	if(document.form1.resposta1.value=="" || document.form1.resposta2.value=="" || document.form1.resposta3.value=="" || document.form1.resposta4.value=="" || document.form1.resposta5.value==""){
+		alert("Não marcaste nenhuma opção, por favor preencha novamente.");
+	}
+	else{
+		if(document.form1.resposta1.value=="2"){
+			cont=cont+5;
+		}
+	
+		if(document.form1.resposta2.value=="3"){
+			cont=cont+5;
+		}
+	
+		if(document.form1.resposta3.value=="1"){
+			cont=cont+5;
+		}
+	
+		if(document.form1.resposta4.value=="1"){
+			cont=cont+5;
+		}
+	
+		if(document.form1.resposta5.value=="4"){
+			cont=cont+5;
+		}
+		
+		alert("Parabéns, " + nome + " você acertou " + cont + " de 25 pontos!");
+	}
+}
+</script>	
+</head>
+
+<body onload="myFunction()">
+<div class="header">
+	<h2> QUIZ </h2>
+</div>
+
+<div>
+<nav class="">
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Inscrição</a></li>
+      <li class="active"><a href="quiz.html">Quiz</a></li>
+      <li><a href="picgame.html">PicGame</a></li>
+	  <li><a href="calculadora.html">Calculadora</a></li>
+    </ul>
+</nav>
+</div>
+<div class="row">
+</div>
+<div class = "direita">
+</div><br>
+
+<form name="form1" onsubmit="valida()">
+	<fieldset><br>
+	<legend>QUIZ:</legend>
+	
+	<label>Pergunta 1: Qual o nome do primeiro rei de Portugal?</label><br>
+	<input type="radio" name="resposta1" value="1"> D. Felipe II <br>
+	<input type="radio" name="resposta1" value="2"> D. Afonso Henriques <br>
+	<input type="radio" name="resposta1" value="3"> D. Afonso Henriques II <br>
+	<br>
+	
+	<label>Pergunta 2: Qual o maior continente?</label><br>
+	<input type="radio" name="resposta2" value="1"> América <br>
+	<input type="radio" name="resposta2" value="2"> Europa <br>
+	<input type="radio" name="resposta2" value="3"> Ásia <br>
+	<input type="radio" name="resposta2" value="4"> África <br>
+	<input type="radio" name="resposta2" value="5"> Oceania <br>
+	<input type="radio" name="resposta2" value="6"> Antártida <br>
+	<br>
+	
+	<label>Pergunta 3: Quantos dias tem um ano?</label><br>
+	<input type="radio" name="resposta3" value="1"> 365 dias <br>
+	<input type="radio" name="resposta3" value="2"> 300 dias <br>
+	<input type="radio" name="resposta3" value="3"> 325 dias <br><br>
+	
+	<label>Pergunta 4: A terra é plana ou redonda?</label><br>
+	<input type="radio" name="resposta4" value="1"> Redonda <br>
+	<input type="radio" name="resposta4" value="2"> Plana <br><br>
+	
+	<label>Pergunta 5: De onde vem a maior reserva de oxigénio?</label><br>
+	<input type="radio" name="resposta5" value="1"> Mato <br>
+	<input type="radio" name="resposta5" value="2"> Esgoto <br>
+	<input type="radio" name="resposta5" value="3"> Árvores <br>
+	<input type="radio" name="resposta5" value="4"> Fitoplâncton <br>
+	</fieldset>
+	<br>
+	
+	<input type="submit" value="Enviar">
+	<input type="reset" value="Limpar">
+</form><br>
+	
+<div class = "rodape">
+<h6>PROJETO FINAL - LARA Nº17 11º14<h6>
+</div>
+
+	
+</body>
+
+</html>

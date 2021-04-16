@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Projeto Final - Formulário de Inscrição</title>
+
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css\edit.css">	
+</head>
+
+<body>
+<div class="header">
+	<h2>- FORMULÁRIO DE INSCRIÇÃO -</h2>
+</div>
+
+<div>
+<nav class="">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Inscrição</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="picgame.html">PicGame</a></li>
+	  <li><a href="calculadora.html">Calculadora</a></li>
+    </ul>
+</nav>
+</div>
+<div class="row">
+</div>
+<div class = "direita">
+</div><br>
+
+<form name="forml" onsubmit="valida()">
+	<fieldset><br>
+	<legend>Informação Pessoal:</legend>
+	
+	<label>Utilizador:</label>
+	<input type="text" name="user" placeholder="Seu nome de utilizador" autofocus required> *
+	<br><br>
+	
+	<label>Password:</label> 
+	<input type="password" placeholder="Senha superior a 8 digitos" name="pass" required> *
+	<br><br>
+	
+	<label>Nome Completo:</label>
+	<input type="text" name="nomec" placeholder="Seu nome completo" size="50" required> *
+	<br><br>
+	
+	<label>Código Postal:</label>
+	<input type="text" id="cep" name="cep" placeholder="Seu código postal">
+	<br><br>
+	
+	<label>Localidade:</label>
+	<input type="text" placeholder="Sua localidade" list="localidades_id">
+	<datalist id="localidades_id">
+	<option value="Lisboa">
+	<option value="Amadora">
+	<option value="Loures">
+	<option value="Odivelas">
+	<option value="Oeiras">
+	<option value="Sintra">
+	<option value="Cascais">
+	</datalist>
+	<br><br>
+	
+	<label>Data de Nascimento:</label>
+	<input type="date">
+	<br><br>
+	
+	<label>Email:</label>
+	<input type="email" name="email" placeholder="Seu email" required> *
+	<br><br>
+	
+	<label>Telefone:</label>
+	<input type="text" name="tel" placeholder="Seu telefone" required> *
+	<br><br>
+	
+	<label>Sexo:</label>
+	<input type="radio" name="sexo" value="masculino">Masculino
+	<input type="radio" name="sexo" value="feminino">Feminino
+	<br><br>
+	
+	<label>Formação:</label>
+	<input type="checkbox">9º Ano
+	<input type="checkbox">12º Ano
+	<input type="checkbox">Curso Profissional
+	<input type="checkbox">Bacharelato
+	<input type="checkbox">Licenciatura
+	<br><br>
+	
+	<label>Desejo ser contactado por:</label>
+	<select>
+	<option value="">Escolha uma opção</option>
+	<option>E-mail</option>
+	<option>Telefone</option>
+	<option>SMS</option>
+	</select>
+	<br><br>
+	
+	<label>Introduza a sua foto (um ficheiro até 250kB:)</label>
+	<input name="file" type="file">
+	<br><br>
+	
+	<label>Comentário livre:</label>
+	<textarea placeholder="Ex: Necessito de resposta o mais rápido possivel."></textarea>
+	
+	</fieldset>
+	<br>
+	
+	<input type="submit" value="Enviar">
+	<input type="reset" value="Limpar">
+</form><br>
+
+<div class = "rodape">
+<h6>PROJETO FINAL - LARA Nº17 11º14<h6>
+</div>
+
+<script>
+	$(document).ready(function(){
+		$("#cep").mask("9999-999");
+	});
+	</script>
+	
+	<script>
+	function valida() {
+		var user = document.forml.user.value;
+		
+		if (user == null || user == "" || !isNaN(user)) {
+		alert("O campo utilizador está vazio ou é um número! Preencha-o corretamente por favor.");
+		return false;
+		}
+		
+		var	pass = document.forml.pass.value;
+		
+		if (pass == null || pass == "" || pass.length < 8 ) {
+		alert("A sua password tem de ter um tamanho superior a 8 caracteres!");
+		return false;
+		}
+	}
+	</script>
+	
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+html{
+	font-family: Tahoma;
+	background-color: white;
+}
+
+.header {
+	color: white;
+    text-align: center;
+	background-color: black;
+}
+
+img {
+	text-align: center;
+	margin
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #121212;
+}
+
+.active {
+    background-color:#007acc;
+	color: black;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li {
+    float: left;
+	
+}
+
+li a:hover {
+    background-color:#008ae6;
+
+}
+
+p {
+	text-align: center;
+}
+
+textarea{
+	width: 100%;
+	height: 20%;
+	border-radius: 4px;
+}
+
+.rodape {
+    background-color: #121212;
+    text-align: center;
+    padding: 10px;
+	color: white;
+	font-size: 50;
+}

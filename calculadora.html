@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css\edit.css">
+
+<title>Projeto Final - Calculadora</title>
+	
+<script>
+function soma(){
+
+  var x = parseInt(document.getElementById('1').value, 10);
+  var y = parseInt(document.getElementById('2').value, 10);
+
+	var resultado;
+	
+	resultado= x + y;
+	
+	alert("O resultado da soma dos números é: " + resultado);
+}
+
+function sub(){
+
+  var x = parseInt(document.getElementById('1').value, 10);
+  var y = parseInt(document.getElementById('2').value, 10);
+
+	var resultado;
+	
+	resultado= x - y;
+	
+	alert("O resultado da subtração dos números é: " + resultado);
+}
+
+function mtp(){
+
+  var x = parseInt(document.getElementById('1').value, 10);
+  var y = parseInt(document.getElementById('2').value, 10);
+
+	var resultado;
+	
+	resultado= x * y;
+	
+	alert("O resultado da multiplicação dos números é: " + resultado);
+}
+
+function divs(){
+
+  var x = parseInt(document.getElementById('1').value, 10);
+  var y = parseInt(document.getElementById('2').value, 10);
+
+	var resultado;
+	
+	resultado= x / y;
+	
+	alert("O resultado da divisão dos números é: " + resultado);
+}
+</script>	
+</head>
+
+<body>
+<div class="header">
+	<h2> CALCULADORA </h2>
+</div>
+
+<div>
+<nav class="">
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Inscrição</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="picgame.html">PicGame</a></li>
+	  <li class="active"><a href="calculadora.html">Calculadora</a></li>
+    </ul>
+</nav>
+</div>
+<div class="row">
+</div>
+<div class = "direita">
+</div><br>
+
+<form name="form1">
+<fieldset><br>
+<label>Digite um número: </label><br>
+<input type="text" name="x" id="1">
+
+<br><br><label>Digite outro número: </label><br>
+<input type="text" name="y" id="2"><br><br>
+
+<button type="button" onclick="soma()"> Soma </button><br>
+
+<button type="button" onclick="sub()"> Subtração </button><br>
+
+<button type="button" onclick="mtp()"> Multiplicação</button><br>
+
+<button type="button" onclick="divs()"> Divisão</button><br>
+
+</fieldset><br>
+</form><br>
+
+<div class = "rodape">
+<h6>PROJETO FINAL - LARA Nº17 11º14<h6>
+</div>
+
+	
+</body>
+
+</html>
