@@ -27,4 +27,4 @@ This project is under license. Check it out [LICENSE](LICENSE) for more details.
 
 ##
 
-[☝🏽 back to top](#schoolproject1)
+[☝🏽 back to top](#school-project-1)
